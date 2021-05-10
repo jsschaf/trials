@@ -10,7 +10,7 @@ data = pd.read_csv('m_all.csv')
 data.columns=data.columns.str.replace('[", =]','')
 data = data[data.foreign_yesno != '="Yes"']
 data = data[~data.swim_time_formatted.str.contains('r')]
-data.drop(['distance', 'result_rank', 'time_id', 'standard_name', 'foreign_yesno', 'event_desc', 'alt_adj_swim_time_formatted', 'swimmer_age', 'club_name', 'hytek_power_points', 'lsc_id', 'swimmer_age', 'event_id', 'sanction_status'], axis=1, inplace=True)
+data.drop(['distance', 'result_rank', 'time_id', 'meet_name', 'standard_name', 'foreign_yesno', 'event_desc', 'alt_adj_swim_time_formatted', 'swimmer_age', 'club_name', 'hytek_power_points', 'lsc_id', 'swimmer_age', 'event_id', 'sanction_status'], axis=1, inplace=True)
 
 # Remove people that have not qualified for Trials
 data = data[data['full_name'].isin(qualifiers)]
