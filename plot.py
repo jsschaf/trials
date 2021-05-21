@@ -21,6 +21,13 @@ for row in df.itertuples():
         times[row[1]].append((date, time))
         
 test = times['Dressel, Caeleb']
+dates, times = zip(*test)
+times = [x for _, x in sorted(zip(dates, times))]
+plt.plot(sorted(dates), times)
+plt.ylabel('Times')
+plt.show()
 
-plt.plot(*zip(*test), '.', color='black')
-plt.savefig('test.jpg')
+
+# todo : create line graph sample
+# todo : create Shiskin decomposition of one sample
+
