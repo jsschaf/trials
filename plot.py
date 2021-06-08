@@ -8,15 +8,26 @@ import matplotlib.dates as dts
 import numpy as np
 import pandas as pd
 import csv
+import itertools 
 
 trialdate= dts.date2num(np.datetime64('2021-06-16'))
 
-datetime.strptime('2012-02-10' , '%Y-%m-%d')
-
-df = pd.read_csv('formatted_times.csv')
-df = df.drop('Unnamed: 0', 1)
-
-times = {}
+def predictPastTrends(season2020, aveGradient):
+    lineOfBestFitPreds = []
+    for l in range(len(season2020['Dates'])):
+        # find prediction using average of past gradients
+        # take point in middle of 2020 season
+        time20 = (season2020['Times'][l])
+        date20 = (season2020['Dates'][l])
+        # y = mx + b
+        # b = y - mx
+        intercept = time20 - (aveGradient*date20)
+        # now predict on olympic trial date
+        trialtime = (aveGradient*(trialdate)) + intercept
+        lineOfBestFitPreds.append(trialtime)
+    if(min(season2020['Times']) - median(lineOfBestFitPreds) > 1.5):
+        return (min(season2020['Times']) - 1.5)
+    return median(lineOfBestFitPreds)
 
 def plot_swimmer(seasons, swimmer):
     i=0
@@ -46,15 +57,37 @@ def plot_swimmer(seasons, swimmer):
 
     ax.set_xticklabels(swag)
     plt.savefig(swimmer + '.jpg')
+    plt.close()
+   
+def predictFastest(seasons):
+
+    fastest = []
+    years = []
+    for year in seasons:
+        if (year != 2020) and (len(seasons[year]['Times']) != 0):
+            fastest.append(min(seasons[year]['Times']))
+            years.append(year)
+
     
+    gradient, intercept = np.polyfit(years, fastest, 1)
 
-def predictSwimmer(swimmerTimes, swimmer):
-    dates, times = zip(*swimmerTimes)
-    times = [x for _, x in sorted(zip(dates, times))]
+    # gradient = average amount person drops per season
+    # predicted time = latest PB - gradient
+    pred2 = fastest[-1] + gradient
+    diff = []
+    for i in range(len(fastest) - 1):
+        diff.append(fastest[i] - fastest[i+1])
 
-    df = pd.DataFrame(swimmerTimes, columns =['Date', 'Time'])
-    df = df.sort_values(by=['Date'])
+    #predictedTime = (gradient*2020) + intercept
+    
+    PB = min(fastest)
+    if (PB - pred2) > 1.5:
+        return PB - 1.5
+        
+    return pred2 # predictedTime
 
+def seasonTransform(df):
+    
     #find one seasons linear regression
     seasons = {}
     for i in range(2015,2021):
@@ -73,75 +106,99 @@ def predictSwimmer(swimmerTimes, swimmer):
 
     #tentatively remove covid season
     seasons.pop(2019)
-    gradients = []
+    
+    return seasons
 
+def findGradients(seasons):
+    gradients = []
     for season in seasons:
 
         x, y = seasons[season]['Dates'], seasons[season]['Times']
         for j in range(len(x)):
             x[j] = dts.date2num(np.datetime64(x[j]))
-
-        if (season != 2020) and (len(x) != 0):
+        # if there is more than one swim, we can create a line of best fit
+        if (season != 2020) and (len(x) > 1):
             #plot the line of best fit
             m, b = np.polyfit(x, y, 1)
             mx = []
             for k in range(len(x)):
                 mx.append(m*x[k])
             gradients.append(m)
+    
+    return gradients
 
-    lineOfBestFitPreds = []
-    if len(gradients) != 0:
-        for l in range(len(seasons[2020]['Dates'])):
-            # find prediction using average of past gradients
-            # take point in middle of 2020 season
-            time20 = (seasons[2020]['Times'][l])
-            date20 = (seasons[2020]['Dates'][l])
-            # y = mx + b
-            # b = y - mx
-            intercept = time20 - (mean(gradients)*date20)
-            # now predict on olympic trial date
-            trialtime = (mean(gradients)*(trialdate)) + intercept
-            lineOfBestFitPreds.append(trialtime)
-    if len(lineOfBestFitPreds) != 0:
-        predict1 = median(lineOfBestFitPreds)
-    fastest = []
+def pastSwims(seasons):
+    
+    if(len(seasons[2015]['Dates']) > 0):
+        return True
+    if(len(seasons[2016]['Dates']) > 0):
+        return True
+    if(len(seasons[2017]['Dates']) > 0):
+        return True
+    if(len(seasons[2018]['Dates']) > 0):
+        return True
+    return False
+    
+def predictSwimmer(swimmerTimes, swimmer):
+
+    df = pd.DataFrame(swimmerTimes, columns =['Date', 'Time'])
+    df = df.sort_values(by=['Date'])
+    
+    #transform data to be order by swimming season
+    seasons = seasonTransform(df)
+
+    # find average slop of past seasons swims
+    gradients = findGradients(seasons)
+    
+    # if there have been past swims and there are current season swims, make prediction
+    if ((len(gradients) != 0) and (len(seasons[2020]['Dates']) > 0)):
+        gradientPrediction = predictPastTrends(seasons[2020], mean(gradients))
     # find fastest times each season
+    # plot here?
+    #    plot_swimmer(seasons, swimmer)
+    
+    #find fastest swims each year
+    # if there have been swims in past years
+    if(pastSwims(seasons)):
+        fastestPrediction = predictFastest(seasons)
 
-    years = []
-    for year in seasons:
-        if (year != 2020) and (len(seasons[year]['Times']) != 0):
-            fastest.append(min(seasons[year]['Times']))
-            years.append(year)
-    PB = 0
-    if (len(fastest) != 0):
-        PB = min(fastest)
-        print(PB)
-    if len(years) != 0:
-        m2, b2 = np.polyfit(years, fastest, 1)
-        predict2 = (m2*2020) + b2
-
-        if len(lineOfBestFitPreds) == 0:
-            return predict2
-        predictedTime = mean([predict1, predict2])
-        # cap it at PB of 1.5s
-        # todo --> change 1.5 to whatever the biggest PB of 2016 & 2012 was 
-        if (PB - predictedTime) > 1.5:
-            return PB - 1.5
-        return predictedTime
+        # if we have a gradient prediction also - then use mean
+        if (len(gradients) != 0) and (len(seasons[2020]['Dates']) > 0):
+            return mean([gradientPrediction, fastestPrediction])
+        
+        #we dont have a gradient prediction
+        return fastestPrediction
+    
     # swimmer has never before made it
     # need to predict based on this years times only
-    
+
     # if only one date, predict same result
-    if len(seasons[2020]['Dates']) == 0:
-        print('ONE TIME ONLY')
+    if len(seasons[2020]['Dates']) == 1:
         return seasons[2020]['Times']
+
+    # predict based on this years linear trend only
     m3, b3 = np.polyfit(seasons[2020]['Dates'], seasons[2020]['Times'], 1)
     predict3 = m3*trialdate + b3
     return predict3
 
+
+datetime.strptime('2012-02-10' , '%Y-%m-%d')
+
+df = pd.read_csv('mformatted_timesjune8200.csv')
+df = df.drop('Unnamed: 0', 1)
+
+times = {}  
 # Create Dict to track all times for each swimmer
 for row in df.itertuples():
-    time = float(row[2][2:].replace('"',''))
+    ntime = row[2][2:].replace('"','')
+    ptime = float(row[2][2:].replace('"','')[2:])
+
+    if (ntime[0] == '1'):
+        ptime += 60.0
+    else:
+        ptime += 120.0
+
+    time = ptime
     date = row[3][2:].replace('"','')
     date = datetime.strptime(date, '%m/%d/%Y').date()
     if(row[1]) not in times:
@@ -150,15 +207,14 @@ for row in df.itertuples():
         times[row[1]].append((date, time))
 
 predictions = {}
+''' For testing
+jack = times['Paulson, Colton']
+times = dict(itertools.islice(times.items(), 5)) 
+times['Paulson, Colton'] = jack
+'''
 for swimmer in times:
-    print(swimmer)
     predictions[swimmer] = predictSwimmer(times[swimmer], swimmer)
-
 with open('predictions.csv', 'w') as csv_file:  
     writer = csv.writer(csv_file)
     for key, value in predictions.items():
        writer.writerow([key, value])
-
-
-# TODO WHY IS JACK SO FAST
-# PB IS ONLY 50.0
