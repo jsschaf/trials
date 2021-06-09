@@ -216,8 +216,11 @@ def run(event):
 
     for swimmer in times:
         predictions[swimmer] = predictSwimmer(times[swimmer], swimmer)
+        
+    predictions = dict(sorted(predictions.items(), key=lambda item: item[1]))
     with open('results/' + event + 'predictions.csv', 'w') as csv_file:  
         writer = csv.writer(csv_file)
+        
         for key, value in predictions.items():
             if event[1] == '2':
                 if value > 120:
