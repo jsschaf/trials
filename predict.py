@@ -11,6 +11,7 @@ import csv
 import itertools 
 
 trialdate= dts.date2num(np.datetime64('2021-06-16'))
+datetime.strptime('2012-02-10' , '%Y-%m-%d')
 
 def predictPastTrends(season2020, aveGradient):
     lineOfBestFitPreds = []
@@ -181,40 +182,53 @@ def predictSwimmer(swimmerTimes, swimmer):
     predict3 = m3*trialdate + b3
     return predict3
 
+def run(event):
 
-datetime.strptime('2012-02-10' , '%Y-%m-%d')
 
-df = pd.read_csv('mformatted_timesjune8200.csv')
-df = df.drop('Unnamed: 0', 1)
+    df = pd.read_csv('data/' + event + '.csv')
+    df = df.drop('Unnamed: 0', 1)
 
-times = {}  
-# Create Dict to track all times for each swimmer
-for row in df.itertuples():
-    ntime = row[2][2:].replace('"','')
-    ptime = float(row[2][2:].replace('"','')[2:])
+    times = {}  
+    # Create Dict to track all times for each swimmer
+    for row in df.itertuples():
+        #adjust float calc if event is 200s
+        if event[1] == '2':
+            ntime = row[2][2:].replace('"','')
+            ptime = float(row[2][2:].replace('"','')[2:])
 
-    if (ntime[0] == '1'):
-        ptime += 60.0
-    else:
-        ptime += 120.0
+            if (ntime[0] == '1'):
+                ptime += 60.0
+            else:
+                ptime += 120.0
 
-    time = ptime
-    date = row[3][2:].replace('"','')
-    date = datetime.strptime(date, '%m/%d/%Y').date()
-    if(row[1]) not in times:
-        times[row[1]] = [(date, time)]
-    else:
-        times[row[1]].append((date, time))
+            time = ptime
+        else:
+            time = float(row[2][2:].replace('"',''))
+        date = row[3][2:].replace('"','')
+        date = datetime.strptime(date, '%m/%d/%Y').date()
+        if(row[1]) not in times:
+            times[row[1]] = [(date, time)]
+        else:
+            times[row[1]].append((date, time))
 
-predictions = {}
-''' For testing
-jack = times['Paulson, Colton']
-times = dict(itertools.islice(times.items(), 5)) 
-times['Paulson, Colton'] = jack
-'''
-for swimmer in times:
-    predictions[swimmer] = predictSwimmer(times[swimmer], swimmer)
-with open('predictions.csv', 'w') as csv_file:  
-    writer = csv.writer(csv_file)
-    for key, value in predictions.items():
-       writer.writerow([key, value])
+    predictions = {}
+
+
+    for swimmer in times:
+        predictions[swimmer] = predictSwimmer(times[swimmer], swimmer)
+    with open('results/' + event + 'predictions.csv', 'w') as csv_file:  
+        writer = csv.writer(csv_file)
+        for key, value in predictions.items():
+            if event[1] == '2':
+                if value > 120:
+                    if value < 130:
+                       value = "2:0" + str(value-120) 
+                    else:
+                        value = "2:" + str(value-120)
+                else:
+                    value = "1:" + str(value-60)
+                value = value[:7]
+            else:
+                value = str(value)[:5]
+            print(value)
+            writer.writerow([key, value])

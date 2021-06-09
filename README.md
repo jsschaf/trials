@@ -1,14 +1,20 @@
 # trials
 Predicting the 100m free at 2021 USA Olympic Swimming Trials
 
-### Import.py
+### Run.py
+Execute complete program using:s
+> python run.py
+
+This will produce predictions for mens and womens 100 and 200 freestyles and output results in the results/ directory.
+
+### Transform.py
 
 Using the usaswimming.org database:
-1. Gather all Olympic Trials 100m free qualifiers (m_all.csv)
-2. Gather all 100m free times (faster than B standard) swum in USA since 1 September 2015.
-3. Remove all swims for those not qualified for Olympic Trials (Using m_qualifiers.csv)
-4. Save output to new csv file. 
+1. Gather all Olympic Trials free qualifiers (m100_qual.csv)
+2. Gather all times (faster than B standard) swum in USA since 1 September 2015 (m100_june.csv).
+3. Remove all swims for those not qualified for Olympic Trials
+4. Save output to new csv file (m100.csv). 
 
-### Plot.py
-For each swimmer, plot history of 100m free times in scatter plot (for fun).
+### Predict.py
+For each swimmer, predict outcome of a chosen event. 
 
