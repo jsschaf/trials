@@ -1,3 +1,5 @@
+#### Final Results are in the results folder.
+
 # trials
 Predicting the 100m free at 2021 USA Olympic Swimming Trials
 
@@ -17,4 +19,6 @@ Using the usaswimming.org database:
 
 ### Predict.py
 For each swimmer, predict outcome of a chosen event. 
+
+
 
