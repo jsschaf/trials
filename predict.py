@@ -46,7 +46,9 @@ def plot_swimmer(seasons, swimmer):
                 mxTemp.append(mTemp*xTemp[k])
             
             plt.plot(xTemp, mxTemp + bTemp, color=cols[i])
-            plt.xlabel("Season")
+            plt.locator_params(axis='x', nbins=7)
+            plt.title('100 Freestyle: ' + swimmer)
+            plt.xlabel("Date")
             plt.ylabel("Time")
             i += 1
             
@@ -54,7 +56,7 @@ def plot_swimmer(seasons, swimmer):
     labs = (ax.get_xticks())
     swag = []
     for elt in labs:
-        swag.append(dts.num2date(elt).strftime('%Y'))
+        swag.append(dts.num2date(elt).strftime('%m/%Y'))
 
     ax.set_xticklabels(swag)
     plt.savefig(swimmer + '.jpg')
@@ -233,5 +235,4 @@ def run(event):
                 value = value[:7]
             else:
                 value = str(value)[:5]
-            print(value)
             writer.writerow([key, value])
