@@ -22,7 +22,7 @@ The 2019/2020 season was not included due to Covid-19 interruptions.
 
 Each swimmer had their performance plotted, an example of Caeleb Dressel’s 100 Free shown here:
 
-![Dressel 100 Free](https://github.com/jsschaf/trials/blob/main/Dressel%2C%20Caeleb.jpg)
+![Dressel 100 Free](https://github.com/jsschaf/trials/blob/main/Dressel,%20Caeleb.jpg?raw=true)
 
 #### High Level Method Overview
 
