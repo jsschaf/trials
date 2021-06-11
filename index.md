@@ -10,27 +10,29 @@ Let’s focus on predicting a few marquee events which will impact USA Relays in
 To keep the analysis relatively recent and manageable, data used was from the beginning of the 2015/2016 season up until June 7, 2021. All athletes qualified for the 2021 USA Olympic Trials (Wave 1 and 2) were considered given that no start lists were available at the time of writing. 
 
 ### The Method:
+
 Each swimmer had their performances broken down into seasons:
-```markdown
 -	2015/16
 -	2016/17
 -	2017/18
 -	2018/19
 -	2020/21
-```
+
 The 2019/2020 season was not included due to Covid-19 interruptions.
 
 Each swimmer had their performance plotted, an example of Caeleb Dressel’s 100 Free shown here:
 
 ![Dressel 100 Free](https://github.com/jsschaf/trials/blob/gh-pages/Dressel%2C%20Caeleb.jpg)
 
+Predictions were made using the midpoint of intraseason and interseason linear regression. This analysis attempts to consider the overall trend of a swimmer’s improvement, their tendency to drop time at taper, as well as the actual times they have been recently swimming. It does not consider external factors that are ultimately also at play, such as sickness or injury, experience, nerves, or covid related training difficulties. However, it does provide a useful and fun point of analysis, highlighting some exciting ‘up and comers’ that have been rising the ranks and could make a big impact at trials. 
+
+##### Interseason Predictions:
 The gradient of each season’s linear progression was used to find an expected slope for the current season. In other words, we can look at how much faster or slower a swimmer typically gets throughout the season and apply that information to the current season. To continue the Dressel example, he typically gets steadily faster as a season progresses, and ends up between 2.5 and 3.5 seconds faster at the end of the season than the beginning. 
 Using linear regression with this predicted slope and the times already swum this season, we can project a 2021 Olympic Trial result. 
 
-This result was cross referenced with the trends of season-best performances since 2015. For example, if a swimmer has season best times of 50.0, 49.5, 49.0 in each of the last 3 seasons, we predict they will swim a 48.5 in the following season. Admittedly, this does not perfectly represent the nuances of dropping time in one’s swimming career. 
+##### Intraseason Predictions:
+Here, we consider the trend of each swimmer's season-best performances since 2015. For example, if a swimmer has season best times of 50.0, 49.5, 49.0 in each of the last 3 seasons, we predict they will swim a 48.5 in the following season. Admittedly, this does not perfectly represent the nuances of dropping time in one’s swimming career, but it does provide valuable data. 
 
-
-This analysis attempts to consider the overall trend of a swimmer’s improvement, their tendency to drop time at taper, as well as the actual times they have been recently swimming. It does not consider external factors that are ultimately also at play, such as sickness or injury, experience, nerves, or covid related training difficulties. However, it does provide a useful and fun point of analysis, highlighting some exciting ‘up and comers’ that have been rising the ranks and could make a big impact at trials. 
 
 ### The Results (top 30):
 
