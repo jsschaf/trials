@@ -1,1 +1,3 @@
 theme: jekyll-theme-slate
+title: Predicting the Results of 2021 USA Swimming Olympic Trials
+description: With Wave 2 of USA Swimming Olympic Trials around the corner, levels of spectator speculation are reaching all-time highs. In an attempt to join the join the fun, and potentially have some long-awaited pickem’ success, I have attempted to predict race outcomes using the available data on usaswimming.org and a bit of programming.
