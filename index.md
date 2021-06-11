@@ -72,108 +72,112 @@ This analysis attempts to consider the overall trend of a swimmer’s improvemen
 
 #### Men 200 Free
 
-1	Smith, Kieran	1:44.76
-2	Foster, Carson	1:46.34
-3	Dressel, Caeleb	1:46.48
-4	Julian, Trenton	1:46.63
-5	Seliskar, Andrew	1:46.65
-6	Apple, Zach	1:46.79
-7	House, Grant	1:46.83
-8	Callan, Patrick	1:46.98
-9	Magahey, Jake	1:47.06
-10	Pieroni, Blake	1:47.09
-11	Kibler, Drew	1:47.10
-12	Haas, Townley	1:47.31
-13	Urlando, Luca	1:47.33
-14	Farris, Dean	1:47.44
-15	Rooney, Maxime	1:47.53
-16	Newkirk, Jeff	1:47.62
-17	Davis, Wyatt	1:47.98
-18	Bybee, Cody	1:47.98
-19	Freeman, Trey	1:48.00
-20	Sztolcman, Christian	1:48.15
-21	Walker, Jack	1:48.19
-22	Hill, Julian	1:48.34
-23	Brown, Zach	1:48.37
-24	Theall, Mark	1:48.48
-25	Carrozza, Coby	1:48.68
-26	Harting, Zach	1:48.76
-27	Grothe, Zane	1:48.81
-28	Stone, Lane	1:48.84
-29	Delakis, Paul	1:48.86
-30	Mitchell, Jake	1:48.87
+| Place | Name | Time |
+| --- | --- | --- |
+|1|	Smith, Kieran	|1:44.76|
+|2|	Foster, Carson|	1:46.34|
+|3|	Dressel, Caeleb|	1:46.48|
+|4|	Julian, Trenton	|1:46.63|
+|5|	Seliskar, Andrew	|1:46.65|
+|6|	Apple, Zach	|1:46.79|
+|7|	House, Grant	|1:46.83|
+|8|	Callan, Patrick|	1:46.98|
+|9|	Magahey, Jake	|1:47.06|
+|10|	Pieroni, Blake|	1:47.09|
+|11|	Kibler, Drew	|1:47.10|
+|12|	Haas, Townley	|1:47.31|
+|13|	Urlando, Luca	|1:47.33|
+|14|	Farris, Dean	|1:47.44|
+|15|	Rooney, Maxime|	1:47.53|
+|16|	Newkirk, Jeff	|1:47.62|
+|17|	Davis, Wyatt	|1:47.98|
+|18|	Bybee, Cody	|1:47.98|
+|19|	Freeman, Trey|	1:48.00|
+|20|	Sztolcman, Christian|	1:48.15|
+|21|	Walker, Jack|	1:48.19|
+|22|	Hill, Julian|	1:48.34|
+|23|	Brown, Zach	|1:48.37|
+|24|	Theall, Mark|	1:48.48|
+|25|	Carrozza, Coby|	1:48.68|
+|26|	Harting, Zach	|1:48.76|
+|27|	Grothe, Zane	|1:48.81|
+|28|	Stone, Lane	|1:48.84|
+|29|	Delakis, Paul|	1:48.86|
+|30	|Mitchell, Jake	|1:48.87|
 
 
 
 #### Women 100 Free
 
-1	Manuel, Simone	52.74
-2	Weitzeil, Abbey	53.12
-3	Deloof, Catie	53.33
-4	Huske, Torri	53.36
-5	McLaughlin, Katie	53.38
-6	Curzan, Claire	53.45
-7	Walsh, Gretchen	53.68
-8	Brown, Erika	53.74
-9	Comerford, Mallory	53.83
-10	Kendall, Amanda	54.11
-11	Tetzloff, Aly	54.23
-12	Mack, Linnea	54.25
-13	Geer, Margo	54.25
-14	Hinds, Natalie	54.37
-15	Tang, Amy	54.48
-16	Smoliga, Olivia	54.49
-17	Ledecky, Katie	54.63
-18	Ivey, Isabel	54.64
-19	Schmitt, Allison	54.72
-20	DeLoof, Gabby	54.73
-21	Fisch, Claire	54.77
-22	Alons, Kylee	54.80
-23	Walsh, Alex	54.85
-24	Pelaez, Erika	55.00
-25	Dahlia (Worrell), Kelsi	55.11
-26	Garofalo, Isabella	55.14
-27	Nelson, Beata	55.15
-28	Parker, Maxine	55.16
-29	Douglass, Kate	55.19
-30	Perry, Ky-lee	55.25
+| Place | Name | Time |
+| --- | --- | --- |
+|1	|Manuel, Simone	|52.74|
+|2	|Weitzeil, Abbey	|53.12|
+|3	|Deloof, Catie	|53.33|
+|4	|Huske, Torri	|53.36|
+|5	|McLaughlin, Katie|	53.38|
+|6	|Curzan, Claire	|53.45|
+|7	|Walsh, Gretchen	|53.68|
+|8	|Brown, Erika	|53.74|
+|9	|Comerford, Mallory|	53.83|
+|10	|Kendall, Amanda	|54.11|
+|11	|Tetzloff, Aly	|54.23|
+|12	|Mack, Linnea	|54.25|
+|13	|Geer, Margo	|54.25|
+|14	|Hinds, Natalie	|54.37|
+|15	|Tang, Amy	|54.48|
+|16	|Smoliga, Olivia	|54.49|
+|17	|Ledecky, Katie	|54.63|
+|18	|Ivey, Isabel	|54.64|
+|19	|Schmitt, Allison	|54.72|
+|20	|DeLoof, Gabby	|54.73|
+|21	|Fisch, Claire	|54.77|
+|22	|Alons, Kylee	|54.80|
+|23	|Walsh, Alex	|54.85|
+|24	|Pelaez, Erika|	55.00|
+|25	|Dahlia (Worrell), Kelsi|	55.11|
+|26	|Garofalo, Isabella	|55.14|
+|27	|Nelson, Beata	|55.15|
+|28	|Parker, Maxine	|55.16|
+|29	|Douglass, Kate	|55.19|
+|30	|Perry, Ky-lee	|55.25|
 
 
 #### Women 200 Free
 
-1	Ledecky, Katie	1:55.69
-2	McLaughlin, Katie	1:55.85
-3	Madden, Paige	1:56.41
-4	Manuel, Simone	1:57.06
-5	Schmitt, Allison	1:57.21
-6	Forde, Brooke	1:57.52
-7	Smith, Leah	1:57.76
-8	Smith, Regan	1:57.91
-9	Raab, Meaghan	1:57.91
-10	DeLoof, Gabby	1:57.94
-11	Flickinger, Hali	1:57.98
-12	Cox, Madisyn	1:58.08
-13	Gemmell, Erin	1:58.37
-14	Margalis, Melanie	1:58.41
-15	Weyant, Emma	1:58.66
-16	Kozan, Justina	1:58.71
-17	Tuggle, Claire	1:58.83
-18	Laning, Erica	1:58.89
-19	Comerford, Mallory	1:59.20
-20	Strouse, Ashley	1:59.37
-21	Runge, Cierra	1:59.43
-22	Drabot, Katie	1:59.49
-23	Smoliga, Olivia	1:59.55
-24	Pitzer, Lauren	1:59.55
-25	Nordmann, Lillie	1:59.56
-26	Deloof, Catie	1:59.59
-27	Nordin, Emma	1:59.61
-28	Stege, Rachel	1:59.61
-29	Hicks, Chloe	1:59.64
-30	Pash, Kelly	1:59.68
+| Place | Name | Time |
+| --- | --- | --- |
+|1|	Ledecky, Katie|	1:55.69|
+|2|	McLaughlin, Katie	|1:55.85|
+|3|	Madden, Paige	|1:56.41|
+|4|	Manuel, Simone|	1:57.06|
+|5|	Schmitt, Allison|	1:57.21|
+|6|	Forde, Brooke|	1:57.52|
+|7|	Smith, Leah	|1:57.76|
+|8|	Smith, Regan	|1:57.91|
+|9|	Raab, Meaghan	|1:57.91|
+|10|	DeLoof, Gabby|	1:57.94|
+|11|	Flickinger, Hali	|1:57.98|
+|12|	Cox, Madisyn	|1:58.08|
+|13|	Gemmell, Erin	|1:58.37|
+|14|	Margalis, Melanie|	1:58.41|
+|15|	Weyant, Emma|	1:58.66|
+|16|	Kozan, Justina|	1:58.71|
+|17|	Tuggle, Claire|	1:58.83|
+|18|	Laning, Erica	|1:58.89|
+|19|	Comerford, Mallory|	1:59.20|
+|20|	Strouse, Ashley	|1:59.37|
+|21|	Runge, Cierra	|1:59.43|
+|22|	Drabot, Katie	|1:59.49|
+|23|	Smoliga, Olivia|	1:59.55|
+|24|	Pitzer, Lauren|	1:59.55|
+|25|	Nordmann, Lillie|	1:59.56|
+|26|	Deloof, Catie	|1:59.59|
+|27|	Nordin, Emma	|1:59.61|
+|28|	Stege, Rachel	|1:59.61|
+|29|	Hicks, Chloe	|1:59.64|
+|30|	Pash, Kelly	|1:59.68|
 
 
 Disclaimer: This is by no means a perfect example of performance prediction. There are hundreds of ways to potentially predict the outcome of a swimming race, some using more historical data or mathematical abstraction than others. I tried to choose a model which produced accurate results and married the available data with the ability to share interpretable methods and my own (limited) skill level. If you would like to see my code or have any feedback and/or suggestions about my methodology, I would love to hear it. Let me know by email at schaferjacqui@gmail.com.
-
-
 
