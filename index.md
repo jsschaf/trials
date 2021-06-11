@@ -36,7 +36,8 @@ This analysis attempts to consider the overall trend of a swimmer’s improvemen
 
 #### Men 100 Free
 | Place | Name | Time |
-| --- | --- | ___ |
+| --- | --- | --- |
+
 | 1	| Dressel, Caeleb	| 47.06 |
 |2	|Apple, Zach	|47.48|
 |3|	Howard, Robert|	47.69|
