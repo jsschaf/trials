@@ -35,11 +35,7 @@ Here, we consider the trend of each swimmer's season-best performances since 201
 
 ### The Results (top 30):
 
-#### Men
-
-<table>
-<tr><th>Men 100 Free  </th><th> Men 200 Free</th></tr>
- <tr><td>
+#### Men 100 Freestyle
     
 | Place | Name | Time |
 | --- | --- | --- |
@@ -73,7 +69,8 @@ Here, we consider the trend of each swimmer's season-best performances since 201
 |28	|Loy, Drew	|49.29|
 |29	|Shebat, John|	49.29|
 |30|	Chaney, Adam|	49.32|
-</td><td>
+
+#### Men 200 Freestyle
 
 | Place | Name | Time |
 | --- | --- | --- |
@@ -108,14 +105,9 @@ Here, we consider the trend of each swimmer's season-best performances since 201
 |29|	Delakis, Paul|	1:48.86|
 |30	|Mitchell, Jake	|1:48.87|
 
-</td></tr> </table>
 
-
-#### Women
-
-<table>
-<tr><th>Women 100 Free  </th><th> Women 200 Free</th></tr>
-<tr><td>
+#### Women 100 Freestyle
+ 
   
 | Place | Name | Time |
 | --- | --- | --- |
@@ -151,7 +143,7 @@ Here, we consider the trend of each swimmer's season-best performances since 201
 |30	|Perry, Ky-lee	|55.25|
 
 
-</td><td>
+#### Women 200 Freestyle
 
 | Place | Name | Time |
 | --- | --- | --- |
@@ -186,7 +178,6 @@ Here, we consider the trend of each swimmer's season-best performances since 201
 |29|	Hicks, Chloe	|1:59.64|
 |30|	Pash, Kelly	|1:59.68|
 
-  </td></tr> </table>
 
 Disclaimer: This is by no means a perfect example of performance prediction. There are hundreds of ways to potentially predict the outcome of a swimming race, some using more historical data or mathematical abstraction than others. I tried to choose a model which produced accurate results and married the available data with the ability to share interpretable methods and my own (limited) skill level. If you would like to see my code or have any feedback and/or suggestions about my methodology, I would love to hear it. Let me know by email at schaferjacqui@gmail.com.
 
