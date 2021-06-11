@@ -24,6 +24,8 @@ Each swimmer had their performance plotted, an example of Caeleb Dressel’s 100
 
 ![Dressel 100 Free](https://github.com/jsschaf/trials/blob/gh-pages/Dressel%2C%20Caeleb.jpg)
 
+#### High Level Method Overview
+
 Predictions were made using the midpoint of intraseason and interseason linear regression. This analysis attempts to consider the overall trend of a swimmer’s improvement, their tendency to drop time at taper, as well as the actual times they have been recently swimming. It does not consider external factors that are ultimately also at play, such as sickness or injury, experience, nerves, or covid related training difficulties. However, it does provide a useful and fun point of analysis, highlighting some exciting ‘up and comers’ that have been rising the ranks and could make a big impact at trials. 
 
 ##### Interseason Predictions:
