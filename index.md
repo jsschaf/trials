@@ -39,8 +39,8 @@ Here, we consider the trend of each swimmer's season-best performances since 201
 
 <table>
 <tr><th>Men 100 Free  </th><th> Men 200 Free</th></tr>
-<tr><td>
-
+ <tr><td>
+    
 | Place | Name | Time |
 | --- | --- | --- |
 | 1	| Dressel, Caeleb	| 47.06 |
@@ -73,10 +73,7 @@ Here, we consider the trend of each swimmer's season-best performances since 201
 |28	|Loy, Drew	|49.29|
 |29	|Shebat, John|	49.29|
 |30|	Chaney, Adam|	49.32|
-
 </td><td>
-
-
 
 | Place | Name | Time |
 | --- | --- | --- |
@@ -112,7 +109,6 @@ Here, we consider the trend of each swimmer's season-best performances since 201
 |30	|Mitchell, Jake	|1:48.87|
 
 </td></tr> </table>
-
 
 
 #### Women
