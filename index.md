@@ -22,7 +22,7 @@ The 2019/2020 season was not included due to Covid-19 interruptions.
 
 Each swimmer had their performance plotted, an example of Caeleb Dressel’s 100 Free shown here:
 ```markdown
-![Dressel 100 Free](Dressel, Caeleb.jpg)
+![Dressel 100 Free](https://github.com/jsschaf/trials/blob/gh-pages/Dressel%2C%20Caeleb.jpg)
 ```
 The gradient of each season’s linear progression was used to find an expected slope for the current season. In other words, we can look at how much faster or slower a swimmer typically gets throughout the season and apply that information to the current season. To continue the Dressel example, he typically gets steadily faster as a season progresses, and ends up between 2.5 and 3.5 seconds faster at the end of the season than the beginning. 
 Using linear regression with this predicted slope and the times already swum this season, we can project a 2021 Olympic Trial result. 
@@ -35,9 +35,9 @@ This analysis attempts to consider the overall trend of a swimmer’s improvemen
 ### The Results (top 30):
 
 #### Men 100 Free
+
 | Place | Name | Time |
 | --- | --- | --- |
-
 | 1	| Dressel, Caeleb	| 47.06 |
 |2	|Apple, Zach	|47.48|
 |3|	Howard, Robert|	47.69|
