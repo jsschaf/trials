@@ -1,6 +1,6 @@
 ## Predicting the Results of USA Swimming Olympic Trials
 
-With Wave 2 of USA Swimming Olympic Trials around the corner, levels of spectator speculation are reaching all-time highs. In an attempt to join the join the fun, and potentially have some long-awaited pickem’ success, I have attempted to predict race outcomes using the available data on usaswimming.org and a bit of programming.![image](https://user-images.githubusercontent.com/25021191/121615015-47527b80-caa3-11eb-8995-200446b8433a.png)
+With Wave 2 of USA Swimming Olympic Trials around the corner, levels of spectator speculation are reaching all-time highs. In an attempt to join the join the fun, and potentially have some long-awaited pickem’ success, I have attempted to predict race outcomes using the available data on usaswimming.org and a bit of programming.
 
 
 ### The Data:
