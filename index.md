@@ -1,8 +1,3 @@
-## Predicting the Results of USA Swimming Olympic Trials
-
-With Wave 2 of USA Swimming Olympic Trials around the corner, levels of spectator speculation are reaching all-time highs. In an attempt to join the join the fun, and potentially have some long-awaited pickem’ success, I have attempted to predict race outcomes using the available data on usaswimming.org and a bit of programming.
-
-
 ### The Data:
 
 Let’s focus on predicting a few marquee events which will impact USA Relays in Tokyo: The Men’s and Women’s 100 and 200 Freestyle events.  
